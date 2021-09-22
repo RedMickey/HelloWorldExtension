@@ -81,7 +81,9 @@ export function activate(context: vscode.ExtensionContext) {
 	
 					console.log("helloworld.testCliCommand result:");
 					console.log(result);
-					console.log(resStr);
+					console.log(
+						resStr || `Command "testCliCommand" worked incorrectly: CLI execution skipped, empty result`
+					);
 				} catch (err) {
 					console.log(err);
 					throw err;
