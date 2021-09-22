@@ -10,14 +10,27 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:helloworld.helloWorld"
+		"onCommand:helloworld.testNpmInstallCommand",
+		"onCommand:helloworld.testNpmRunCommand",
+		"onCommand:helloworld.testCliCommand"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "helloworld.helloWorld",
-				"title": "Hello World"
+				"command": "helloworld.testNpmInstallCommand",
+				"title": "Test Npm Install Command",
+				"category": "Helloworld"
+			},
+			{
+				"command": "helloworld.testNpmRunCommand",
+				"title": "Test Npm Run Command",
+				"category": "Helloworld"
+			},
+			{
+				"command": "helloworld.testCliCommand",
+				"title": "Test Cli Command",
+				"category": "Helloworld"
 			}
 		]
 	},
