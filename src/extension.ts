@@ -47,12 +47,13 @@ export function activate(context: vscode.ExtensionContext) {
 				const currentWorkSpaceFolder = workSpaceFolders[0].uri.fsPath;
 
 				try {
-					let result = cp.execSync(
-						"npm run myRun",
+					let result = cp.spawnSync(
+						"npm",
+						["run", "myRun"],
 						{ cwd: currentWorkSpaceFolder }
 					);
 	
-					const resStr = result.toString();
+					const resStr = result.stdout.toString();
 	
 					console.log("helloworld.testNpmRunCommand result:");
 					console.log(result);
